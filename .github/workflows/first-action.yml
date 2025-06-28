@@ -11,4 +11,4 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ./
         with:
-          name: 'Hello from my custom action!'
+          message: 'Hello from my custom action!'
