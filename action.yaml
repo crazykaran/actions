@@ -2,6 +2,11 @@ name: 'My Custom Action'
 description: 'Say Hello'
 author: 'Karan'
 
+inputs:
+  message:
+    description: "Message to print"
+    required: true
+
 runs:
   using: 'node16'
   main: 'lib/index.js'
