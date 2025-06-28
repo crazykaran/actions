@@ -1,16 +1,14 @@
-name: Test My Action
+name: Say Hello
 
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
 
 jobs:
-  test:
+  run-my-action:
+    name: Checks if this action works
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
-      - name: Run my custom action
-        uses: ./    # Local path to action
+      - uses: ./
         with:
-          message: "Hello from GitHub Actions"
+          name: 'Hello from my custom action!'
