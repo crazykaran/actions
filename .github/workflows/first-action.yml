@@ -2,6 +2,14 @@ name: Say Hello
 
 on:
   workflow_dispatch:
+  inputs:
+      environment:
+        description: 'Target Environment'
+        required: true
+        default: 'staging'
+      version:
+        description: 'Version to deploy'
+        required: false
 
 jobs:
   run-my-action:
